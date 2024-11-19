@@ -65,7 +65,7 @@ provide('cart', {
     :total-price="totalPrice"
     :vat-price="vatPrice"
   />
-  <div class="bg-[#FFF] w-4/5 m-auto h-auto rounded-xl shadow-xl mt-14">
+  <div class="bg-[#FFF] w-full lg:w-4/5 m-auto h-auto rounded-xl shadow-xl ">
     <Header :total-price="totalPrice" @open-drawer="openDrawer" />
     <div class="py-10 px-[80px]">
        <router-view></router-view>

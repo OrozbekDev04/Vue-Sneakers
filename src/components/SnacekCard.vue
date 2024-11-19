@@ -12,8 +12,8 @@ defineProps({
 
 <template>
   <div
-    class=" px-1 py-1 flex flex-col items-center gap-3.5 w-[210px] h-[270px]
-     cursor-pointer rounded-[40px] bg-white border border-[#F3F3F3] relative 
+    class="w-[80px] h-full rounded-[10px] md:px-1 py-1 flex flex-col items-center gap-3.5 sm:w-[210px] sm:h-[270px]
+     cursor-pointer sm:rounded-[40px] bg-white border border-[#F3F3F3] relative 
      pt-[20px] transition hover:-translate-y-2 hover:shadow-xl
      
      "
@@ -23,17 +23,17 @@ defineProps({
       
       :src="isFavorite ? '/like-1.svg' : '/like-2.svg'"
       alt="Like"
-      class="w-8 absolute top-6 left-10"
+      class="w-5 sm:w-8 absolute top-1 sm:top-6 right-1 sm:left-10"
       @click="onClickFavorites"
     />
-    <img :src="imageUrl" :alt="title" class="w-[120px]" />
-    <p class="text-black text-center">{{ title }}</p>
-    <div class="flex justify-between gap-[39px]">
+    <img :src="imageUrl" :alt="title" class="w-10  sm:w-[120px]" />
+    <p class="text-black text-xs text-center sm:text-sm ">{{ title }}</p>
+    <div class="flex justify-between gap-2 sm:gap-[39px]">
       <div class="flex flex-col">
-        <span class="text-state-400">Цена:</span>
-        <b>{{ price }} руб.</b>
+        <span class="text-state-400 text-[8px] sm:text-sm">Цена:</span>
+        <b class="text-[8px] sm:text-sm">{{ price }} руб.</b>
       </div>
-      <img :src="!isAdded ? '/plus.svg' : '/checked.svg'" alt="plus" @click="onClickAdd" />
+      <img :src="!isAdded ? '/plus.svg' : '/checked.svg'" alt="plus" @click="onClickAdd" class="w-5 sm:w-8"/>
     </div>
   </div>
 </template>
