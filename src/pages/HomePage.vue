@@ -130,24 +130,24 @@ watch(cart, () => {
 </script>
 
 <template>
-  <div class="flex items-center justify-between mb-8">
-    <h2 class="text-3xl font-bold">Все Кроссовки</h2>
-    <div class="flex gap-4">
-      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
+  <div class="flex flex-col gap-4 sm:flex-row  items-center justify-between mb-4 md:mb-8">
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold">Все Кроссовки</h2>
+    <div class="flex gap-4 flex-col md:flex-row w-4/5 md:w-full">
+      <select @change="onChangeSelect" class="w-4/9 md:w-full py-2 px-3 border rounded-md outline-none">
         <option value="name">По названиям</option>
         <option value="price">По цене (дешевые)</option>
         <option value="-price">По цене (дорогие)</option>
       </select>
-      <div class="relative">
+      <div class="relative w-5/3  md:w-full mx-auto flex justify-center"  >
         <img
           src="/search.svg"
           alt="search-icon"
-          class="transition absolute top-4 left-3 cursor-pointer"
+          class=" w-3 transition absolute top-3 left-3 sm:top-4 sm:left-3 cursor-pointer "
         />
         <input
           @change="onChangeSearchInput"
           type="text"
-          class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+          class=" border rounded-md  py-1 pl-4 pr-1 sm:py-2  sm:pl-11 sm:pr-4 outline-none focus:border-gray-400 w-4/6   md:w-full"
           placeholder="Поиск..."
         />
       </div>

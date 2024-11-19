@@ -6,6 +6,9 @@ import {useRouter} from 'vue-router';
 const favorites = ref([])
 const { addToCart, removeFromCart } = inject('cart')
 const router = useRouter()
+  const goToHome = () => {
+    router.push('/')
+  }
 
 const onClickAddPlus = (item) => {
   if (!item.isAdded) {
@@ -15,9 +18,6 @@ const onClickAddPlus = (item) => {
   }
 }
 
-const goToHome = () => {
-  router.push('/')
-}
 
 const removeFromFavorite = (item) => {
   const index = favorites.value.indexOf(item)
